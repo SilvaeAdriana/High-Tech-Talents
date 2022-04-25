@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro Inquilino</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        <h1> Realize seu cadastro como inquilino: </h1>
+        <br>
+        <form action="{{ url_for('cadastro') }}" methods="POST">
+            <table>
+                <tr>
+                    <td>Nome</td>
+                    <td><input type="text" name ="nome"></td>
+                </tr>
+
+                <tr>
+                    <td>Endereço</td>
+                    <td><input type="text" name ="endereco"></td>
+                </tr>
+
+                <tr>
+                    <td>Data de nascimento</td>
+                    <td><input type="datetime" name="data de nascimento"></td>
+                </tr>
+
+                <tr>
+                    <td>Gênero</td>
+                    <td><input type="text" name="gênero"></td>
+                </tr>
+
+                <tr>
+                    <td>Documento</td>
+                    <td><input type="text" name="documento"></td>
+                </tr>
+
+                <tr>
+                    <td>Id do documento</td>
+                    <td><input type="number" name="iddocumento"></td>
+                </tr>
+
+            </table>
+            <br>
+            <input type="submit" value="Cadastrar">
+        </form>      
+
+        <style>
+            body{
+                background-color: rgb(220, 225, 208);
+                
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-decoration: double;
+                font-size: 20px;
+            }
+            h1{
+                color: red; 
+                text-align: center;              
+            }
+
+            
+        </style>
+        
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Opções no nosso site</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        <h1> Lista de clientes:</h1>
+        <br>
+        <table  border="4">
+            <tr>
+                <td>ID </td>              
+                <td> Nome </td>
+                <td> Endereço</td>
+                <td>Data de nascimento</td>
+                <td>Gênero</td>
+                <td>Documento</td>
+                <td>ID do documento</td>
+                <td>Aluguel</td>
+                <td>Excluir</td>
+            </tr>
+            {%  for inquilino in inquilino   %}  <!--  x in objeto-->
+            <tr>
+                <td>{{inquilino.id}}</td>
+                <td>{{inquilino.nome}}</td>
+                <td>{{inquilino.endereco}}</td>
+                <td>{{inquilino.data_nascimento}}</td>
+                <td>{{inquilino.genero}}</td>
+                <td>{{inquilino.documento}}</td>
+                <td>{{inquilino.iddocumento}}</td>                
+                <td>{{inquilino.aluguel}}</td>
+                <td><a href="/excluir/{{inquilino.id}}"> X </a></td>
+            </tr>
+            {% endfor %}
+
+
+
+
+        </table>
+
+        <style>
+            body{
+                background-color: rgb(220, 225, 208);
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-decoration: double;
+                font-size: 20px;
+            }
+            h1{
+                color: red;                
+            }
+        </style>
+        
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Delete o registro de inquilino pelo ID:</title>
+        
+    </head>
+    <body>
+        <h1>Insira o ID do inquilino que você quer deletar:</h1>
+        <form action="{{ url_for('deletar') }}" methods="DELETE">
+           
+            <input type="number" nome="id" >
+            <br>
+            <input type="submit" value="Deletar">
+        </form>
+        <style>
+            body{
+                background-color: rgb(220, 225, 208);
+                
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-decoration: double;
+                font-size: 20px;
+            }
+            h1{
+                color: red; 
+                text-align: center;              
+            }
+
+            
+        </style>
+        
+    </body>
+</html>
